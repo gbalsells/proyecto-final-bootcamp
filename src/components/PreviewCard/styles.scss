@@ -2,24 +2,12 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
   transition: 0.3s;
-  margin: 1rem 1rem 1rem;
+  margin: 1rem ;
   padding: 1rem;
-  height: 280px;
-  width: 200px;
-  border-radius: 10px;
-  margin-left: -50px;
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
+  
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-    transition: 0.4s ease-out;
-  }
-
-  &:hover ~ & {
-    position: relative;
-    left: 50px;
     transition: 0.4s ease-out;
   }
 

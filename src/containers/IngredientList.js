@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getIngredients } from '../redux/actions';
-import IngredientPreview from '../components/IngredientPreview';
-import './ingredientList.scss'
+import PreviewCard from '../components/PreviewCard';
+import './list.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.ingredients.ingredientsLoading === true,
@@ -18,9 +18,9 @@ class IngredientList extends React.Component {
     return(
       <React.Fragment>
         {this.props.loading ? <p>CARGANDING</p>:
-          <div className="ingredient-list">
+          <div className="list">
             {
-              this.props.ingredients.map( (ingredient, index) => <IngredientPreview key={ingredient.id} {...ingredient}/>)
+              this.props.ingredients.map( (ingredient, index) => <PreviewCard key={ingredient.id} element={{object: {...ingredient}, parent: 'ingredient'}}/>)
             }
           </div>
         }

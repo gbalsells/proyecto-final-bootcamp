@@ -31,11 +31,11 @@ class IngredientDetails extends React.Component {
               Nutritional value: {ingredient.nutritional_value}
               Calories: {ingredient.calories}
               Used in {ingredient.recipes.length} recipes:
-              {ingredient.recipes.map( (recipe, index) =>
-              <ul>
+            </p>
+            {ingredient.recipes.map( (recipe, index) =>
+              <ul key={recipe._id}>
                 <li>{recipe.title}</li>
               </ul>)}
-            </p>
           </div>
         }
       </React.Fragment>

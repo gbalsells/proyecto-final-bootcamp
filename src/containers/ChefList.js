@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getChefs } from '../redux/actions';
-import ReactMarkdown from 'react-markdown';
+import PreviewCard from '../components/PreviewCard'
+import './list.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.chefs.chefsLoading === true,
@@ -15,15 +16,13 @@ class ChefList extends React.Component {
   
 
   render() {
-    console.log(this.props)
     return(
       <React.Fragment>
         {this.props.loading ? <p>CARGANDING</p>:
-          <div>
-            <h1>Tenemos {this.props.chefs.length} chefs</h1>
-            {this.props.chefs.map(chef => {
-                return <ReactMarkdown key={chef._id} source={chef.full_name} />
-            })}
+          <div className="list">
+             {
+              this.props.chefs.map( (chef, index) => <PreviewCard key={chef.id} element={{object: {...chef}, parent: 'chef'}}/>)
+            }
           </div>
         }
       </React.Fragment>
