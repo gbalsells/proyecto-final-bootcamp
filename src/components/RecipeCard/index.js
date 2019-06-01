@@ -6,7 +6,7 @@ import './styles.scss';
 const RecipeCard = () => {
   return (
     <React.Fragment>
-      Hola k ase
+    pijazo
     </React.Fragment>
   )
 }

@@ -2,7 +2,7 @@ import actionTypes from '../actionTypes';
 
 const initialState = {
   ingredientLoading: true,
-  ingredient: []
+  ingredient: {}
 }
 
 export default function (state = initialState, action) {
@@ -11,7 +11,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         ingredientLoading: true,
-        ingredient: []
+        ingredient: {}
       }
     }
     case actionTypes.GET_INGREDIENT_BY_ID_SUCCESS: {
