@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getRecipes } from '../redux/actions';
 import RecipeCard from '../components/RecipeCard'
+import './list.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.recipes.recipesLoading === true,
@@ -19,7 +20,7 @@ class Recipes extends React.Component {
     return(
       <React.Fragment>
         {this.props.loading ? <p>CARGANDING</p>:
-                <div>
+                <div className="list">
                     {this.props.recipes.map(recipe => {
                         return <RecipeCard key={recipe._id} {...recipe} />
                     })}

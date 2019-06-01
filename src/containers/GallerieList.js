@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getGalleries } from '../redux/actions';
+import PreviewCard from '../components/PreviewCard';
+import './list.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.galleries.galleriesLoading === true,
@@ -18,13 +20,12 @@ class GallerieList extends React.Component {
     return(
       <React.Fragment>
         {this.props.loading ? <p>CARGANDING</p>:
-                <div>
-                    <h1>Tenemos {this.props.galleries.length} galleries</h1>
-                    {this.props.galleries.map(gallerie => {
-                        return `${gallerie.title} \n`
-                    })}
-                </div>
+          <div className="list">
+            {
+              this.props.galleries.map( (gallerie, index) => <PreviewCard key={gallerie.id} element={{object: {... gallerie}, parent: 'gallerie'}} /> )
             }
+          </div>
+        }
       </React.Fragment>
     )
       

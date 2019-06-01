@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.scss';
+import './recipeCard.scss';
 
 const RecipeCard = (recipe) => {
-  console.log('Receta: ', recipe.title, recipe.main_image.url)
   return (
     <React.Fragment>
-    <div className="card">
-    <img src={recipe.main_image.url} alt="Avatar" />
-      <div className="container">
-        <h4><b>{recipe.title}</b></h4> 
-        <p>Architect & Engineer</p> 
+    <div className="recipe-card">
+      <Link to={`/recipes/${recipe._id}`} >
+        <img src={recipe.main_image.url} alt="recipe"></img>
+      </Link>
+      <div className="recipe-card__container">
+        <h1>{recipe.title}</h1> 
       </div>
     </div>
     </React.Fragment>

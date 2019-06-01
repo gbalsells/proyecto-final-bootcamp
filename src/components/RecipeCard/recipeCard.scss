@@ -1,25 +1,24 @@
-.card{
+.recipe-card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
   transition: 0.3s;
-  margin: 1rem ;
+  margin: 1rem;
+  margin-left: 3rem;
   padding: 1rem;
-  
 
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.5);
     transition: 0.4s ease-out;
   }
 
-  &__image{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+  img{
+    width: 400px;
+    height: 300px;
   }
 
   &__container{
     padding-top: 1rem;
-
+    
     h1{
       font-size: 1rem;
       text-align: center;

@@ -5,7 +5,8 @@ const routes = {
   CHEF_DETAIL: '/chefs/:id',
   INGREDIENTS: '/ingredients',
   INGREDIENT_DETAIL: '/ingredients/:id',
-  GALLERIES: '/galleries'
+  GALLERIES: '/galleries',
+  GALLERIE_DETAIL: '/galleries/:id'
 }
 
 export default routes

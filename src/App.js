@@ -4,12 +4,13 @@ import './App.css';
 import routes from './routes';
 import Nav from './components/Nav';
 import Home from './pages/Home'
-import RecipeDetail from './pages/RecipeDetail'
+import RecipeDetail from './pages/RecipeDetails'
 import Chefs from './pages/Chefs'
-import ChefDetail from './pages/ChefDetail'
+import ChefDetail from './pages/ChefDetails'
 import Ingredients from './pages/Ingredients'
 import IngredientDetails from './pages/IngredientDetails'
 import Galleries from './pages/Galleries'
+import GallerieDetails from './pages/GallerieDetails'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path={`${routes.INGREDIENTS}`} component={Ingredients} />
             <Route exact path={`${routes.INGREDIENT_DETAIL}`} component={IngredientDetails} />
             <Route exact path={`${routes.GALLERIES}`} component={Galleries} />
+            <Route exact path={`${routes.GALLERIE_DETAIL}`} component={GallerieDetails} />
             <Route render={() => <h1>404 - No se encontró</h1>} />
           </Switch>
         </div>

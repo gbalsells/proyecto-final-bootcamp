@@ -158,7 +158,7 @@ export const getChefById = (id) => {
   }
 };
 
-export const getGalleriesById = (id) => {
+export const getGallerieById = (id) => {
   return dispatch => {
     dispatch({
       type: actionTypes.GET_GALLERIE_BY_ID
