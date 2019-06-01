@@ -1,25 +1,25 @@
 import actionTypes from '../actionTypes';
 
 const initialState = {
-  chefLoading: true,
-  chef: {}
+  gallerieLoading: true,
+  gallerie: {}
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case actionTypes.GET_CHEF_BY_ID: {
+    case actionTypes.GET_GALLERIE_BY_ID: {
       return {
         ...state,
-        chefLoading: true,
-        chef: {}
+        gallerieLoading: true,
+        gallerie: {}
       }
     }
-    case actionTypes.GET_CHEF_BY_ID_SUCCESS: {
+    case actionTypes.GET_GALLERIE_BY_ID_SUCCESS: {
       console.log('Entró a success')
       return {
         ...state,
-        chefLoading: false,
-        chef: action.chef
+        gallerieLoading: false,
+        gallerie: action.gallerie
       }
     }
     default:
