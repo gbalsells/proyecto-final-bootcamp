@@ -5,6 +5,7 @@
   margin: 1rem;
   margin-left: 3rem;
   padding: 1rem;
+  text-align: justify;
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.5);
@@ -20,9 +21,32 @@
     padding-top: 1rem;
     
     h1{
-      font-size: 1rem;
+      font-size: 1.3rem;
       text-align: center;
       font-weight: 600;
+    }
+
+    &__info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+
+      &__fullStar{
+        text-decoration: none;
+        font-size: 2rem;
+        color: chartreuse;
+      }
+
+      &__emptyStar{
+        text-decoration: none;
+        font-size: 2rem;
+        color: gray;
+      }
+
+      i{
+        font-size: 1.2rem;
+      }
     }
   }
 }
