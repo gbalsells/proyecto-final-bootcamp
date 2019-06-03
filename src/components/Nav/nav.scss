@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   display:flex;
+  flex-wrap: wrap;
   align-items:center;
   justify-content:space-between;
   background-color: #8fbf38;
@@ -36,11 +37,9 @@
         color: rgb(253, 255, 112);
       }
     }
-  
-    
   }
-  
 }
 
+@import '../../media-queries';
 
 
