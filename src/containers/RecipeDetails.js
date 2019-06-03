@@ -65,13 +65,10 @@ class RecipeDetails extends React.Component {
                 </div>
               }
                 <i className="fa fa-clock-o" > {recipe.prep_time} </i>
-                <div className="tooltip">
                 <Link to={`/chefs/${recipe.chef._id}`} className="detail__info__chef">
                   <img src={recipe.chef.image.url} alt="chef" />
                   <p>By {recipe.chef.full_name}</p>
-                  <span className="tooltiptext">Click to see this chef's details</span>
-                  </Link>
-                </div>
+                </Link>
               </div>
               <div className="detail__ingredients">
                 {
@@ -81,6 +78,15 @@ class RecipeDetails extends React.Component {
               <div className="detail__instructions">
                 <ReactMarkdown key={recipe._id} source={recipe.instructions} />
               </div>
+              {
+                recipe.gallery ?
+                <div>
+                <h2>Gallery: </h2>
+                <Link to={`/galleries/${recipe.gallery.id}`} className="detail__gallery">
+                  <PreviewCard key={recipe.gallery.id} element={{object: {...recipe.gallery}, parent: 'galleries'}} />
+                </Link>
+                </div> : ''
+              }
             </div>
           </div>
             }

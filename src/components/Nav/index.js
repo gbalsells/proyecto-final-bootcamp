@@ -8,7 +8,8 @@ const Nav = () => {
   return (
     <nav className="main-nav">
       <Link to={routes.HOME} className="main-nav__home">
-        <img src={logo} width="166" height="34" alt="" />
+        <img src={logo} width="166" height="34" alt="" /> 
+        <p>Recipes</p>
       </Link>
       <div className="main-nav__routes">
       <Link to={routes.INGREDIENTS} className="main-nav__routes__link">Ingredients</Link>

@@ -27,7 +27,7 @@ class GallerieList extends React.Component {
         </div>  :
           <div className="list">
             {
-              this.props.galleries.map( (gallerie, index) => <PreviewCard key={gallerie.id} element={{object: {...gallerie}, parent: 'galleries'}} /> )
+              this.props.galleries.map( (gallery, index) => <PreviewCard key={gallery.id} element={{object: {...gallery}, parent: 'galleries'}} /> )
             }
           </div>
         }

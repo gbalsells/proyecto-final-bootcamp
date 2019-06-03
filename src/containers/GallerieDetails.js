@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getGallerieById } from '../redux/actions';
 import './list.scss'
+import './detail.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.gallerieById.gallerieLoading === true,
@@ -32,14 +33,11 @@ class GallerieDetails extends React.Component {
             <h1>{gallerie.title}</h1>
             {
               gallerie.photos.map( (photo, index) =>
-              <a href={photo.url}>
-                <img src={photo.url} href={photo.url} alt="gallerie"/>
+              <a href={photo.url} rel="noopener noreferrer" target="_blank">
+                <img src={photo.url} alt="gallerie"/>
               </a>
               )
             }
-            
-            <p>
-            </p>
           </div>
         }
       </React.Fragment>

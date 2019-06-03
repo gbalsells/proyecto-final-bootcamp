@@ -9,17 +9,28 @@
   width: auto;
 
   &__home{
+    display: flex;
     margin: 1rem 0 1rem 2rem;
-    
+    align-items: center;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    font-family: 'Courgette', cursive;
+
+    p{
+      margin: 1rem 0 1rem 0.8rem;
+    }
   }
 
   &__routes{
-    margin-right: 2rem;
+    margin: 1rem 2rem 1rem 2rem;
+    
     &__link {
       color: white;
       text-decoration: none;
-      font-weight: 500;
-      padding: 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+      padding-left: 2rem;
 
       &:hover {
         color: rgb(253, 255, 112);

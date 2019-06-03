@@ -35,6 +35,10 @@
       align-items: center;
       text-decoration: none;
 
+      &:hover p{
+        color: rgb(0, 0, 165);
+      }
+
 
       img{
         height: 70px;
@@ -46,6 +50,7 @@
       p{
         margin-left: 1rem;
         color: black;
+        font-weight: 700;
       }
 
     }
@@ -57,12 +62,23 @@
   }
 
   &__instructions{
-    margin-top: 2rem;
+    margin-top: 3rem;
+  }
+
+  &__gallery{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    max-width: 300px;
   }
 
   ul{
     margin-left: -1rem;
     font-size: 1.2rem;
+  }
+
+  h2{
+    margin-top: 3rem;
   }
 }
 
@@ -76,7 +92,7 @@
   }
   
   &__data{
-    margin-left: 2rem;
+    margin: 1rem 0 0 2rem;
 
     h2{
       margin-top: 3rem;
@@ -89,7 +105,12 @@
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  margin-bottom: 1rem;
 
+  a{
+    max-width: 900px;
+  }
+  
   img{
     margin-top: 1rem;
     width: 900px;
@@ -126,37 +147,4 @@ picture{
 .recipes-in-card{
     display: flex;
 
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  bottom: 20%;
-  left: 140%;
-  margin-left: -60px;
-
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }
