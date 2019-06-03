@@ -39,6 +39,14 @@ const RecipeCard = (recipe) => {
           }
           <i className="fa fa-clock-o" > {recipe.prep_time} </i>
         </div>
+        {
+          recipe.chef.image ?
+          <div className="recipe-card__container__chef">
+            <img src={recipe.chef.image.url} alt="recipe" />
+            <p>By {recipe.chef.full_name}</p>
+          </div> : ''
+        }
+        
       </div>
     </div>
     </React.Fragment>

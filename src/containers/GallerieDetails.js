@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getGallerieById } from '../redux/actions';
-import noImage from '../assets/noImage.jpeg';
 
 const mapStateToProps = (state) => ({
   loading: state.gallerieById.gallerieLoading === true,
@@ -18,13 +17,17 @@ class GallerieDetails extends React.Component {
   }
 
   render() {
+    console.log('Gallerie: ', this.props.gallerie)
     const gallerie = this.props.gallerie;
     return (
       <React.Fragment>
         {this.props.loading ? <p>CARGANDING</p>:
           <div className="gallerie-list">
-            <h1>{gallerie.full_name}</h1>
-            <img src={gallerie.image ? gallerie.image.url : noImage} alt="gallerie"/>
+            <h1>{gallerie.title}</h1>
+            {
+              gallerie.photos.map( (photo, index) => <img src={photo.url} alt="gallerie"/>)
+            }
+            
             <p>
             </p>
           </div>

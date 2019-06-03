@@ -17,7 +17,7 @@ export default function (state = initialState, action) {
     case actionTypes.GET_RECIPE_BY_ID_SUCCESS: {
       return {
         ...state,
-        recipesLoading: false,
+        recipeLoading: false,
         recipe: action.recipe
       }
     }

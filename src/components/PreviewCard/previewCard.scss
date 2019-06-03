@@ -2,7 +2,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
   transition: 0.3s;
-  margin: 1rem ;
+  margin: 1rem 3rem 1rem 0 ;
   padding: 1rem;
   
 
@@ -12,16 +12,21 @@
   }
 
   .img{
-    &__chef{
-      height: 180px;
-      width: 150px;
+    &__chefs{
+      height: auto;
+      width: 200px;
       border-radius: 50%;
     }
 
-    &__ingredient{
-      height: 150px;
-      width: 150px;
+    &__ingredients{
+      height: 200px;
+      width: 200px;
       border-radius: 50%;
+    }
+
+    &__galleries{
+      width: 400px;
+      height: 320px;
     }
   }
 

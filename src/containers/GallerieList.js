@@ -22,7 +22,7 @@ class GallerieList extends React.Component {
         {this.props.loading ? <p>CARGANDING</p>:
           <div className="list">
             {
-              this.props.galleries.map( (gallerie, index) => <PreviewCard key={gallerie.id} element={{object: {...gallerie}, parent: 'gallerie'}} /> )
+              this.props.galleries.map( (gallerie, index) => <PreviewCard key={gallerie.id} element={{object: {...gallerie}, parent: 'galleries'}} /> )
             }
           </div>
         }

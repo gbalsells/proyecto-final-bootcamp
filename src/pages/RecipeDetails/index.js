@@ -1,7 +1,12 @@
 import React from 'react';
+import RecipeDetails from '../../containers/RecipeDetails'
 
-const RecipeDetail = () => {
-    return <h1>Recipe detail</h1>
+const RecipeDetail = (props) => {
+    return (
+      <React.Fragment>
+        <RecipeDetails {...props} />
+      </React.Fragment>
+    )
 }
 
 export default RecipeDetail;

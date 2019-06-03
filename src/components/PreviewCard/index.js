@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom'
 
 const preview = ({element}) => {
   const object = element.object
-  let page = 'ingredients'
   let name = object.name
   let cardClass = `img__${element.parent}`
-  if (element.parent === 'chef'){
-    page = 'chefs'
+  if (element.parent === 'chefs'){
     name = object.full_name
   }
-  if (element.parent === 'gallerie') {
-    page = 'galleries'
+  if (element.parent === 'galleries') {
+    name = object.title
   }
   console.log(cardClass)
   return (
     <div className="preview-card">
-      <Link to={`/${page}/${object._id}`} >
-        <img src={object.image ? object.image.url : noImage} alt="ingredient" className={cardClass}></img>
+      <Link to={`/${element.parent}/${object._id}`} >
+        <img src={
+          element.parent === 'galleries' ? object.photos[0].url :
+          object.image ? object.image.url : noImage} alt="ingredient" className={cardClass}></img>
       </Link>
       <div className="preview-card__container">
         <h1>{name}</h1>

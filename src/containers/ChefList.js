@@ -21,7 +21,7 @@ class ChefList extends React.Component {
         {this.props.loading ? <p>CARGANDING</p>:
           <div className="list">
              {
-              this.props.chefs.map( (chef, index) => <PreviewCard key={chef.id} element={{object: {...chef}, parent: 'chef'}}/>)
+              this.props.chefs.map( (chef, index) => <PreviewCard key={chef.id} element={{object: {...chef}, parent: 'chefs'}}/>)
             }
           </div>
         }
