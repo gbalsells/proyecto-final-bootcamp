@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { getChefById } from '../redux/actions';
 import noImage from '../assets/noImage.jpeg'
 import RecipeCard from '../components/RecipeCard'
-// import './ingredientList.scss'
+import './list.scss'
+import './detail.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.chefById.chefLoading === true,
@@ -24,21 +25,30 @@ class ChefDetails extends React.Component {
     console.log(chef)
     return(
       <React.Fragment>
-        {this.props.loading ? <p>CARGANDING</p>:
-          <div className="chef-list">
-            <h1>{chef.full_name}</h1>
-            <img src={chef.image ? chef.image.url : noImage} alt="chef"/>
-            <p>
-              {chef.bio}
-            </p>
-            <h2>
-              {chef.recipes.length} 
-              {
-                chef.recipes.length === 1 ? ' recipe': ' recipes'
-              }
-            </h2>
-            <div className="recipes-in-card">
-              {chef.recipes.map( (recipe, index) => <RecipeCard key={recipe._id} {...recipe} />)}
+        {this.props.loading ?
+          <div className="lds-circle">
+            <div>
+              Loading...
+            </div>
+          </div>  :
+          <div className="chef-detail">
+            <div className="chef-detail__image">
+              <img src={chef.image ? chef.image.url : noImage} alt="chef"/>
+            </div>
+            <div className="chef-detail__data">
+              <h1>{chef.full_name}</h1>
+              <p>
+                {chef.bio}
+              </p>
+              <h2>
+                {chef.recipes.length} 
+                {
+                  chef.recipes.length === 1 ? ' recipe': ' recipes'
+                }
+              </h2>
+              <div className="recipes-in-card">
+                {chef.recipes.map( (recipe, index) => <RecipeCard key={recipe._id} {...recipe} />)}
+              </div>
             </div>
           </div>
         }

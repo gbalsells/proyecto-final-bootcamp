@@ -1,10 +1,12 @@
 .main-nav {
-  position:relative;
+  position: relative;
   display:flex;
   align-items:center;
   justify-content:space-between;
   background-color: #8fbf38;
   color: white;
+  font-family: 'ABeeZee', sans-serif;
+  width: auto;
 
   &__home{
     margin: 1rem 0 1rem 2rem;

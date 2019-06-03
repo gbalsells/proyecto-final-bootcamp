@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getGallerieById } from '../redux/actions';
+import './list.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.gallerieById.gallerieLoading === true,
@@ -21,11 +22,20 @@ class GallerieDetails extends React.Component {
     const gallerie = this.props.gallerie;
     return (
       <React.Fragment>
-        {this.props.loading ? <p>CARGANDING</p>:
-          <div className="gallerie-list">
+        {this.props.loading ?
+          <div className="lds-circle">
+            <div>
+              Loading...
+            </div>
+          </div>  :
+          <div className="gallerie-detail">
             <h1>{gallerie.title}</h1>
             {
-              gallerie.photos.map( (photo, index) => <img src={photo.url} alt="gallerie"/>)
+              gallerie.photos.map( (photo, index) =>
+              <a href={photo.url}>
+                <img src={photo.url} href={photo.url} alt="gallerie"/>
+              </a>
+              )
             }
             
             <p>

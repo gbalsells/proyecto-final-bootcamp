@@ -20,7 +20,7 @@ class GallerieList extends React.Component {
     return(
       <React.Fragment>
         {this.props.loading ?         
-        <div class="lds-circle">
+        <div className="lds-circle">
           <div>
             Loading...
           </div>

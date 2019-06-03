@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  margin-left: 2rem;
 }
 
 .lds-circle {
@@ -10,22 +11,24 @@
   align-items: center;
   height: 50vh;
   transform: translateZ(1px);
+
+  div {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 6px;
+    border-radius: 50%;
+    background: rgb(182, 182, 182);
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }  
 }
-.lds-circle > div {
-  color: white;
-  display: inline-block;
-  font-size: 20px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 90px;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  margin: 6px;
-  border-radius: 50%;
-  background: rgb(182, 182, 182);
-  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
+
 @keyframes lds-circle {
   0%, 100% {
     animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);

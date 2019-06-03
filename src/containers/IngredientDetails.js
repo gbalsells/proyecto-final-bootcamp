@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { getIngredientById } from '../redux/actions';
 import noImage from '../assets/noImage.jpeg'
 import RecipeCard from '../components/RecipeCard';
-// import './ingredientList.scss'
+import './list.scss'
+import './detail.scss'
 
 const mapStateToProps = (state) => ({
   loading: state.ingredientById.ingredientLoading === true,
@@ -24,24 +25,35 @@ class IngredientDetails extends React.Component {
     console.log('Props: ', this.props.ingredient)
     return(
       <React.Fragment>
-        {this.props.loading ? <p>CARGANDING</p>:
-          <div className="ingredient-details">
-            <h1>{ingredient.name}</h1>
-            <img src={ingredient.image ? ingredient.image.url : noImage} alt="ingredient"/>
-            <p>
-              Nutritional value: {ingredient.nutritional_value}
-            </p>
-            <p>
-              Calories: {ingredient.calories}
-            </p>
-            <h2>
-              Used in {ingredient.recipes.length} 
-              {
-                ingredient.recipes.length === 1 ? ' recipe': ' recipes'
-              }
-            </h2>
-            <div className="recipes-in-card">
-              {ingredient.recipes.map( (recipe, index) => <RecipeCard key={recipe._id} {...recipe} />)}
+        {this.props.loading ?
+          <div className="lds-circle">
+            <div>
+              Loading...
+            </div>
+          </div>  :
+          <div> 
+            <picture>
+              <img src={ingredient.image ? ingredient.image.url : noImage} alt="ingredient"/>
+            </picture>
+            <div className="detail">
+              <h1>{ingredient.name}</h1>
+              <ul>
+                <li>
+                  Nutritional value: {ingredient.nutritional_value}
+                </li>
+                <li>
+                  Calories: {ingredient.calories}
+                </li>
+              </ul>
+              <h2>
+                Used in {ingredient.recipes.length} 
+                {
+                  ingredient.recipes.length === 1 ? ' recipe': ' recipes'
+                }
+              </h2>
+              <div className="recipes-in-card">
+                {ingredient.recipes.map( (recipe, index) => <RecipeCard key={recipe._id} {...recipe} />)}
+              </div>
             </div>
           </div>
         }

@@ -1,5 +1,9 @@
+h1, h2{
+  font-family: 'Courgette', cursive;
+}
+
 .app-container__inner{
-  margin-left: 2rem;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 @keyframes App-logo-spin {
