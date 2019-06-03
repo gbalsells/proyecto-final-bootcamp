@@ -15,7 +15,6 @@ export default function (state = initialState, action) {
       }
     }
     case actionTypes.GET_INGREDIENT_BY_ID_SUCCESS: {
-      console.log('Entró a success')
       return {
         ...state,
         ingredientLoading: false,

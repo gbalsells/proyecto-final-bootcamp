@@ -15,7 +15,6 @@ export default function (state = initialState, action) {
       }
     }
     case actionTypes.GET_GALLERIE_BY_ID_SUCCESS: {
-      console.log('Entró a success')
       return {
         ...state,
         gallerieLoading: false,

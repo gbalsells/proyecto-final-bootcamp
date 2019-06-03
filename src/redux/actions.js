@@ -92,7 +92,6 @@ export const getGalleries = () => {
 
 
 export const getIngredientById = (id) => {
-  console.log('Llegando')
   return dispatch => {
     dispatch({
       type: actionTypes.GET_INGREDIENT_BY_ID

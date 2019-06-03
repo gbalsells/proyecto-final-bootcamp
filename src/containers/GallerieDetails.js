@@ -19,7 +19,6 @@ class GallerieDetails extends React.Component {
   }
 
   render() {
-    console.log('Gallerie: ', this.props.gallerie)
     const gallerie = this.props.gallerie;
     return (
       <React.Fragment>

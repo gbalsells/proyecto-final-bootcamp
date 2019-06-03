@@ -13,7 +13,6 @@ const preview = ({element}) => {
   if (element.parent === 'galleries') {
     name = object.title
   }
-  console.log(cardClass)
   return (
     <div className="preview-card">
       <Link to={`/${element.parent}/${object._id}`} >

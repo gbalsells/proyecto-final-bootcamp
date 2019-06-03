@@ -22,7 +22,6 @@ class ChefDetails extends React.Component {
   
   render() {
     const chef = this.props.chef
-    console.log(chef)
     return(
       <React.Fragment>
         {this.props.loading ?

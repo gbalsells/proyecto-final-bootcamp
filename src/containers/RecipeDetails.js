@@ -22,7 +22,6 @@ class RecipeDetails extends React.Component {
   
 
   render() {
-    console.log('RECIPE: ', this.props.recipe)
     const recipe = this.props.recipe
     return(
       <React.Fragment>

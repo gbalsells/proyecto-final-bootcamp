@@ -41,10 +41,10 @@ const RecipeCard = (recipe) => {
         </div>
         {
           recipe.chef.image ?
-          <div className="recipe-card__container__chef">
-            <img src={recipe.chef.image.url} alt="recipe" />
+          <Link to={`/chefs/${recipe.chef._id}`} className="recipe-card__container__chef">
+            <img src={recipe.chef.image.url} alt="chef" />
             <p>By {recipe.chef.full_name}</p>
-          </div> : ''
+          </Link> : ''
         }
         
       </div>

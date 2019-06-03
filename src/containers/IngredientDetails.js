@@ -22,7 +22,6 @@ class IngredientDetails extends React.Component {
   
   render() {
     const ingredient = this.props.ingredient
-    console.log('Props: ', this.props.ingredient)
     return(
       <React.Fragment>
         {this.props.loading ?
