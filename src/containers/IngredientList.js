@@ -17,7 +17,12 @@ class IngredientList extends React.Component {
   render() {
     return(
       <React.Fragment>
-        {this.props.loading ? <p>CARGANDING</p>:
+        {this.props.loading ?         
+        <div class="lds-circle">
+          <div>
+            Loading...
+          </div>
+        </div>  :
           <div className="list">
             {
               this.props.ingredients.map( (ingredient, index) => <PreviewCard key={ingredient.id} element={{object: {...ingredient}, parent: 'ingredients'}}/>)

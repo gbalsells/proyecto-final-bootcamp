@@ -18,7 +18,12 @@ class ChefList extends React.Component {
   render() {
     return(
       <React.Fragment>
-        {this.props.loading ? <p>CARGANDING</p>:
+        {this.props.loading ?
+        <div class="lds-circle">
+          <div>
+            Loading...
+          </div>
+        </div>  :
           <div className="list">
              {
               this.props.chefs.map( (chef, index) => <PreviewCard key={chef.id} element={{object: {...chef}, parent: 'chefs'}}/>)
