@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el proyecto final para el Bootcamp de Web UI de Globant 2019
 
-## Available Scripts
+## Página Home
 
-In the project directory, you can run:
+Se listan las recetas traídas de la API mostrándolas en tarjetas. 
 
-### `npm start`
+Al hacer click sobre la foto de la receta se direcciona al detalle de la misma.
+Al hacer click sobre el chef, se direcciona al detalle del mismo.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Detalle Receta
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Se muestran todos los detalles de la receta elegida (Foto, título, calificación, duración, chef, ingredientes, instrucciones, galerías)
 
-### `npm test`
+Al hacer click sobre el chef, uno de los ingredientes, o la galería, se redirecciona al detalle indicado.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Página Ingredientes
 
-### `npm run build`
+Se listan los ingredientes traídos de la API mostrándolos en tarjetas.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Al hacer click sobre la foto del ingrediente se direcciona al detalle del mismo.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Detalle Ingrediente
+Se muestran todos los detalles del ingrediente elegido (Foto, título, valor nutricional, calorías, recetas que lo usan)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Al hacer click sobre alguna de las recetas se redirecciona al detalle de la misma.
 
-### `npm run eject`
+## Página Chefs
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Se listan los chefs traídos de la API mostrándolos en tarjetas.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Al hacer click sobre la foto del chef se direcciona al detalle del mismo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Detalle Chef
+Se muestran todos los detalles del chef elegido (Foto, nombre completo, biografía , recetas que hizo)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Al hacer click sobre alguna de las recetas se redirecciona al detalle de la misma.
 
-## Learn More
+## Página Galerías
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Se listan las galerías traídas de la API mostrándolas en tarjetas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Al hacer click sobre la foto de la galería se direcciona al detalle de la misma.
 
-### Code Splitting
+### Detalle Galerías
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Se muestran todas las fotos incluídas en la galería elegida. 
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Al hacer click sobre cualquier foto, se abre en tamaño completo en una nueva pestaña del navegador.
