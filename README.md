@@ -1,6 +1,9 @@
+#Proyecto Final - Globant Web UI BootCamp
+#Guido Alejandro Balsells
+
 Este es el proyecto final para el Bootcamp de Web UI de Globant 2019
 
-# Página Home
+## Página Home
 
 Se listan las recetas traídas de la API mostrándolas en tarjetas. 
 
